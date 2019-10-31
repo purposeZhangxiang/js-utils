@@ -11,7 +11,6 @@ export default {
      * @param {rootId} tree根节点id 
      */
     toTree(origin, rootId) {
-        // let cloneOrigin = JSON.parse(JSON.stringify(origin));
         let cloneOrigin = this.deepCopy(origin);
         return cloneOrigin.filter(father => {
             let childArr = cloneOrigin.filter(child => child.pid == father.id);
